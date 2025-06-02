@@ -1,0 +1,15 @@
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/MicToggle.exe
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/MicToggle.pdb
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/MicToggle.pe
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/MicToggle.pdbx
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/mscorlib.pe
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/mscorlib.pdbx
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/mscorlib.dll
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/OutputDir/mscorlib.xml
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/obj/Debug/MicToggle.nfproj.AssemblyReference.cache
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/obj/Debug/MicToggle.nfproj.CoreCompileInputs.cache
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/obj/Debug/MicToggle.nfproj.CopyComplete
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/obj/Debug/MicToggle.exe
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/obj/Debug/MicToggle.pdb
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/obj/Debug/mscorlib.dll
+/home/mat/NetDuino/mic_toggle/nanoTestProj/MicToggle/obj/Debug/mscorlib.xml
