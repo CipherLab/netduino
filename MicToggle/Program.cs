@@ -1,27 +1,22 @@
 using System;
 using System.Threading;
 using System.Diagnostics;
+using System.Device.Gpio; // Added for GPIO functionality
 
 namespace MicToggle
 {
     public class Program
     {
         private const int ButtonPinNumber = 7;
+        private const int LedPinNumber = 2; // Assuming onboard LED is on pin 2, common for nanoFramework boards
 
         public static void Main()
         {
             Debug.WriteLine("Hello from nanoFramework!");
 
-            Thread.Sleep(Timeout.Infinite);
-
-            // Browse our samples repository: https://github.com/nanoframework/samples
-            // Check our documentation online: https://docs.nanoframework.net/
-            // Join our lively Discord community: https://discord.gg/gCyBu8T
-
-            /*
-
-Console.WriteLine("ESP32-S3 Button Test Program Started with .NET nanoFramework!");
+            Console.WriteLine("ESP32-S3 Button and LED Test Program Started with .NET nanoFramework!");
             Console.WriteLine($"Monitoring button on GPIO{ButtonPinNumber}");
+            Console.WriteLine($"Controlling LED on GPIO{LedPinNumber}");
             Console.WriteLine("Ensure button is connected between GPIO" + ButtonPinNumber + " and GND.");
             Console.WriteLine("Using NC button setup: Pressing button (open circuit) should trigger.");
 
@@ -32,7 +27,12 @@ Console.WriteLine("ESP32-S3 Button Test Program Started with .NET nanoFramework!
             // When button IS pressed (circuit open) -> pin reads HIGH (due to PullUp)
             GpioPin buttonPin = gpioController.OpenPin(ButtonPinNumber, PinMode.InputPullUp);
 
+            // Initialize LED pin as output
+            GpioPin ledPin = gpioController.OpenPin(LedPinNumber, PinMode.Output);
+            ledPin.Write(PinValue.Low); // Ensure LED is off initially
+
             bool buttonWasPressed = false; // For NC button logic with PullUp
+            bool ledState = false; // false = off, true = on
             int debounceDelay = 200;
 
             while (true)
@@ -43,6 +43,12 @@ Console.WriteLine("ESP32-S3 Button Test Program Started with .NET nanoFramework!
                 {
                     Console.WriteLine($"Button Pressed! (NC Circuit Opened on GPIO{ButtonPinNumber})");
                     buttonWasPressed = true;
+
+                    // Toggle LED state
+                    ledState = !ledState;
+                    ledPin.Write(ledState ? PinValue.High : PinValue.Low);
+                    Console.WriteLine($"LED is now {(ledState ? "ON" : "OFF")}");
+
                     Thread.Sleep(debounceDelay);
                 }
                 else if (currentButtonState == PinValue.Low && buttonWasPressed)
@@ -54,8 +60,6 @@ Console.WriteLine("ESP32-S3 Button Test Program Started with .NET nanoFramework!
                 }
                 Thread.Sleep(50); // Small delay
             }
-
-            */
         }
     }
 }
